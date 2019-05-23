@@ -20,7 +20,7 @@ install_vscode () {
 
 install_go () {
     wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz -O /tmp/go$VERSION.$OS-$ARCH.tar.gz
-    tar -C /usr/local -xzf /tmp/go$VERSION.$OS-$ARCH.tar.gz
+    sudo tar -C /usr/local -xzf /tmp/go$VERSION.$OS-$ARCH.tar.gz
     rm /tmp/go$VERSION.$OS-$ARCH.tar.gz
 }
 
