@@ -6,6 +6,19 @@ It all started because I always forget which PS1 value I have to set to have my 
 
 I don't expect this to be useful to anyone else, but feel free to use it at your own risk.
 
+## Configure github
+
+```sh
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+Add key [here](https://github.com/settings/keys)
+
+[Source](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
 ## Install Linux
 
 ```sh
