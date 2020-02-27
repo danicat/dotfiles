@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TAG=`date +%Y%m%d%H%M%S`
 
