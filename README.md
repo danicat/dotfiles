@@ -19,9 +19,10 @@ Add key [here](https://github.com/settings/keys)
 
 [Source](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-## Install Linux
+## Usage for Linux
 
 ```sh
-sudo ./setup_linux.sh
+sudo ./setup_linux.sh <GOVERSION>
 source ~/.bash_profile
 ```
+If no GOVERSION is specified, it would by-default install `1.14.2`.
