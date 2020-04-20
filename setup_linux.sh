@@ -3,9 +3,17 @@
 TAG=`date +%Y%m%d%H%M%S`
 
 # Go
-VERSION=1.12.5
 OS=linux
 ARCH=amd64
+
+if [ -z "$1" ]
+then
+      VERSION="1.14.2"
+      echo "\$VERSION is empty, Proceeding with: $VERSION"
+else
+      export VERSION=$1
+      echo "Your selected version is: $VERSION"
+fi
 
 install_vscode () {
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /tmp/microsoft.gpg
@@ -29,6 +37,6 @@ install_dotfiles () {
     cp .bash_profile $HOME/.bash_profile
 }
 
-install_vscode
 install_go
+install_vscode
 install_dotfiles
